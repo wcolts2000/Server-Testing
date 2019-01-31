@@ -1,5 +1,4 @@
 const db = require("../data/dbConfig");
-const users = require("./userModel");
 
 module.exports = { insert };
 
