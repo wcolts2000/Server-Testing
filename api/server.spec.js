@@ -14,23 +14,4 @@ describe("Server: server.js", () => {
       expect(res.type).toMatch(/json/i);
     });
   });
-  describe("Post to /users endpoint", () => {
-    it("should respond with a status code 201 and a message", async () => {
-      let body = { name: "Danielle" };
-
-      let res = await request(server)
-        .post("/users")
-        .send(body);
-
-      expect(res.status).toBe(201);
-      expect(res.body).toEqual({ hello: "Danielle" });
-
-      body = { name: "charles" };
-      res = await request(server)
-        .post("/users")
-        .send(body);
-      expect(res.status).toBe(201);
-      expect(res.body).toEqual({ hello: "charles" });
-    });
-  });
 });

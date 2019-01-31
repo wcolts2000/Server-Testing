@@ -13,7 +13,10 @@ server.get("/", (req, res) => {
 server.post("/users", (req, res) => {
   const { name } = req.body;
 
-  res.status(201).json({ hello: `${name}` });
+  users
+    .insert(name)
+    .then(res.status(201).json({ hello: `${name}` }))
+    .catch(err => res.status(500));
 });
 
 module.exports = server;
