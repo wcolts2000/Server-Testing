@@ -8,3 +8,7 @@ async function insert(user) {
     .where({ id })
     .first();
 }
+
+// async function delete(user) {
+
+// }

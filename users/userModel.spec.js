@@ -27,5 +27,12 @@ describe("Users model", () => {
       expect(res.status).toBe(201);
       expect(res.body).toEqual({ hello: "charles" });
     });
+    it("should insert the provided user", async () => {
+      const user = await userModel.insert({ name: "John Doe" });
+
+      let users = await db("users");
+      expect(users).toHaveLength(1);
+      expect(user.name).toEqual("John Doe");
+    });
   });
 });
