@@ -22,4 +22,18 @@ describe("Server: server.js", () => {
       expect(res.status).toBe(200);
     });
   });
+  // describe("Delete to /users/:id endpoint", () => {
+  //   it("should respond with the number of deleted users", async () => {
+  //     let user = { name: "Fred" };
+
+  //     let res = await request(server)
+  //       .post("/users")
+  //       .send(user);
+  //     let singleUser = await request(server).get("/users/1");
+  //     // .where({ name: "Fred" });
+
+  //     expect(res.status).toBe(201);
+  //     expect(singleUser.name).toEqual("Fred");
+  //   });
+  // });
 });
